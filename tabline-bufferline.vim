@@ -1,4 +1,5 @@
-" Name:    tabline-bufferline.vim
+" tabline-bufferline
+" Plain and simple tabline buffer list display and navigation
 " Author:  Frank Willascheck <github.com/fwillascheck>
 " Created: 2024 Feb 11
 " License: MIT License
@@ -12,21 +13,31 @@ highlight User1 NONE
 " current buffer name
 highlight User2 term=bold,underline cterm=bold,underline gui=bold,underline
 
+" separator
 const s:SEP = ' '
 const s:SEP_SIZE = strlen(s:SEP)
 
 " -----------------------------------------------------------------------------
 
 " buffer navigation with Ctrl+Cursor
-noremap <C-Up> <Nop>
-noremap <C-Down> <Nop>
-noremap <C-Left> <Cmd>bprev<CR>
-noremap <C-Right> <Cmd>bnext<CR>
+" gnome-terminal
+"noremap <C-Up> <Nop>
+"noremap <C-Down> <Nop>
+"noremap <C-Left> <Cmd>bprev<CR>
+"noremap <C-Right> <Cmd>bnext<CR>
+" xterm, rxvt
+noremap <Esc>Oa <Nop>
+noremap <Esc>Ob <Nop>
+noremap <Esc>Od <Cmd>bprev<CR>
+noremap <Esc>Oc <Cmd>bnext<CR>
 
 " -----------------------------------------------------------------------------
 
 " remove terminal from buffer list
-autocmd TermOpen * call setbufvar(bufnr('%'), '&buflisted', 0)
+" neovim
+"autocmd TermOpen * call setbufvar(bufnr('%'), '&buflisted', 0)
+" vim
+autocmd TerminalOpen * call setbufvar(bufnr('%'), '&buflisted', 0)
 
 " -----------------------------------------------------------------------------
 
