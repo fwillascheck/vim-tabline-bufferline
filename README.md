@@ -3,7 +3,7 @@ Plain and simple tabline buffer list display and navigation for Vim and Neovim
 
 ![Screenshot with default configuration](screenshot_default.png)
 
-If there is not enough space to display all buffer names, the names will be shorten with ellipsis. There is no scrolling of the buffer line.
+If there is not enough space, the names will be shorten with ellipsis. There is no scrolling of the buffer line.
 
 ![Screenshot with pipe separator and ellipsis](screenshot_separator_ellipsis.png)
 
@@ -15,7 +15,7 @@ runtime tabline-bufferline.vim
 ```
 
 # Configuration
-Edit the following lines to match the usage of Vim or Neovim.
+Edit the following lines to match your usage of Vim or Neovim.
 
 ```vim
 " remove terminal from buffer list
@@ -25,7 +25,7 @@ Edit the following lines to match the usage of Vim or Neovim.
 autocmd TerminalOpen * call setbufvar(bufnr('%'), '&buflisted', 0)
 ```
 
-Edit the following lines to adjust or remmove the key bindings for buffer switching.
+Edit the following lines to adjust or remove the key bindings for buffer switching.
 
 ```vim
 " buffer navigation with Ctrl+Cursor
@@ -41,7 +41,7 @@ noremap <Esc>Od <Cmd>bprev<CR>
 noremap <Esc>Oc <Cmd>bnext<CR>
 ```
 
-Edit the following lines to adjust the colors/highlight of the tabline.
+Edit the following lines to adjust the highlight of the tabline.
 
 ```vim
 " use normal background color for tabline
@@ -52,7 +52,7 @@ highlight User1 NONE
 highlight User2 term=bold,underline cterm=bold,underline gui=bold,underline
 ```
 
-Edit the follwing line to change the separator char. Default is a single white space, but you can also specify multiple chars.
+Edit the follwing line to change the separator. Default is a single white space, but you can also specify multiple chars.
 
 ```vim
 " separator
