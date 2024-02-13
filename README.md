@@ -10,7 +10,7 @@ If there is not enough space, the names will be shorten with ellipsis. There is 
 The tabline will only be displayed if there is more than one buffer.
 
 # Installation
-Copy the file `tabline-bufferline.vim` into the folder `.vim` or `.config/nvim` of your home directory and add the following line add the beginning of your `.vimrc` or `.config/nvim/init.vim` configuration file.
+Copy the file `tabline-bufferline.vim` into the folder `.vim` or `.config/nvim` of your home directory and add the following line at the beginning of your `.vimrc` or `.config/nvim/init.vim` configuration file.
 
 ```vim
 runtime tabline-bufferline.vim
