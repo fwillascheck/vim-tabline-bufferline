@@ -1,11 +1,13 @@
 # vim-tabline-bufferline
-Plain and simple tabline buffer list display and navigation for Vim and Neovim
+Plain and simple tabline buffer list display and navigation for Vim and Neovim.
 
 ![Screenshot with default configuration](screenshot_default.png)
 
 If there is not enough space, the names will be shorten with ellipsis. There is no scrolling of the buffer line.
 
 ![Screenshot with pipe separator and ellipsis](screenshot_separator_ellipsis.png)
+
+The tabline will only be displayed if there is more than one buffer.
 
 # Installation
 Copy the file `tabline-bufferline.vim` into the folder `.vim` or `.config/nvim` of your home directory and add the following line add the beginning of your `.vimrc` or `.config/nvim/init.vim` configuration file.
